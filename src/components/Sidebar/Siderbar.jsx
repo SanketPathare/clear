@@ -29,7 +29,7 @@ const SiderBar = () => {
             <p className="recent-title">Recent</p>
             {prevPrompts.map((item, index) => {
               return (
-                <div onClick={()=>loadPrompt(item)} className="recent-entry">
+                <div key={index} onClick={()=>loadPrompt(item)} className="recent-entry">
                   <img width={20} src={assets.message_icon} alt="img" />
                   <p>{item.slice(0, 18)}...</p>
                 </div>
